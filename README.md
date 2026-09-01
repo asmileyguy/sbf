@@ -1,2 +1,2 @@
 # sbf
-Simple and lightweight BF interpreter.
+Simple and lightweight BrainF*ck interpreter.
