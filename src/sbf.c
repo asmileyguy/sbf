@@ -161,7 +161,7 @@ int main(int argc, char **argv) {
             file = argv[i];
             file_found = true;
         }
-        // our args
+        // Our args
         SBF_ARG("-h",      sbf_usage(argv[0], false));
         SBF_ARG("--help",  sbf_usage(argv[0], false));
         SBF_ARG("-d",      sbf_enable_debug());
