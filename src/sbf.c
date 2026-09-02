@@ -74,22 +74,13 @@ static void sbf_enable_debug(void) {
     sbf_debug_enabled = true;
 }
 
-static void sbf_usage(const char *prog, bool is_error) {
-    if (is_error) {
-        fprintf(stderr, "usage for sbf:\n");
-        fprintf(stderr, "  %s [options] <file>\n", prog);
-        fprintf(stderr, "  options:\n");
-        fprintf(stderr, "    -h, --help:  shows this help dialouge\n");
-        fprintf(stderr, "    -d, --debug: enables debug messages\n");
-        exit(1);
-    } else {
-        printf("usage for sbf:\n");
-        printf("  %s [options] <file>\n", prog);
-        printf("  options:\n");
-        printf("    -h, --help:  shows this help dialouge\n");
-        printf("    -d, --debug: enables debug messages\n");
-        exit(0);
-    }
+static void sbf_usage(const char *prog) {
+    printf("usage for sbf:\n");
+    printf("  %s [options] <file>\n", prog);
+    printf("  options:\n");
+    printf("    -h, --help:  shows this help dialouge\n");
+    printf("    -d, --debug: enables debug messages\n");
+    exit(0);
 }
 
 static void sbf_exec_instruction(uint8_t instruction) {
@@ -162,8 +153,8 @@ int main(int argc, char **argv) {
             file_found = true;
         }
         // Our args
-        SBF_ARG("-h",      sbf_usage(argv[0], false));
-        SBF_ARG("--help",  sbf_usage(argv[0], false));
+        SBF_ARG("-h",      sbf_usage(argv[0]));
+        SBF_ARG("--help",  sbf_usage(argv[0]));
         SBF_ARG("-d",      sbf_enable_debug());
         SBF_ARG("--debug", sbf_enable_debug());
     }
