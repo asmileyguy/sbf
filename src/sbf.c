@@ -11,8 +11,8 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-#define SBF_LINE_MAX    4096
-#define SBF_MEM_SIZE    32
+#define SBF_LINE_MAX 4096
+#define SBF_MEM_SIZE 32
 
 #define SBF_INSTRUCTION_NON 0x01 // \0 or space
 #define SBF_INSTRUCTION_RIG 0x02 // >
