@@ -1,4 +1,4 @@
-CC = gcc
+CC = cc
 CFLAGS = -std=c11 -MMD -MP
 LD = $(CC)
 LDFLAGS = 
