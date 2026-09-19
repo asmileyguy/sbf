@@ -70,10 +70,6 @@ static void sbf_error(const char *fmt, ...) {
     exit(1);
 }
 
-static void sbf_enable_debug(void) {
-    sbf_debug_enabled = true;
-}
-
 static void sbf_usage(const char *prog) {
     printf("usage for sbf:\n");
     printf("  %s [options] <file>\n", prog);
@@ -81,6 +77,10 @@ static void sbf_usage(const char *prog) {
     printf("    -h, --help:  shows this help dialouge\n");
     printf("    -d, --debug: enables debug messages\n");
     exit(0);
+}
+
+static void sbf_enable_debug(void) {
+    sbf_debug_enabled = true;
 }
 
 static void sbf_exec_instruction(uint8_t instruction) {
