@@ -1,5 +1,5 @@
 CC = cc
-CFLAGS = -std=c11 -MMD -MP
+CFLAGS = -O2 -std=c11 -MMD -MP
 LD = $(CC)
 LDFLAGS = 
 STRIP = strip
